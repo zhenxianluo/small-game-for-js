@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+	<title>Document</title>
+	<style type="text/css">
+		html{background-color: #eee;height: 100%;}
+		body{max-width: 500px;margin: 0 auto;background-image: url(bg.jpg);-webkit-background-size: cover;
+		background-size: cover;padding: 0;height: 100%;min-width: 320px;}
+		p{margin:0 5%;}
+		header{width: 100%;height: 50px;position: relative;font: 2rem;}
+		.othertime{height: 100%;float: left;line-height: 50px;margin-left: 5%;}
+		.fenshu{height: 100%;float: right;line-height: 50px;margin-right: 5%;}
+		#container{width: 100%;height: 100%;}
+		.col-33{width:33.333333%;height:33.333333333%;float: left;position: relative;}
+		.col-33 img{width: 70%;height: auto;position: absolute;bottom: 0;}
+		footer{clear: both;text-align: center;}
+		#play{font-size: 2rem;margin-top: 20px;}
+	</style>
+</head>
+<body>
+	<header>
+		<span class="othertime">游戏剩余时间：<span id="time">30</span></span>
+		<span class="fenshu">次数：<span id="fraction">0</span></span>
+	</header>
+	<p style="color: pink;">温馨提示：本游戏单局时间30秒，地处出现间隔为0.3s~1.5s，猛点屏幕获得高分。</p>
+	<div id="container">
+		<div class="col-33"><img src="hole.png"></div>
+		<div class="col-33"><img src="hole.png"></div>
+		<div class="col-33"><img src="hole.png"></div>
+		<div class="col-33"><img src="hole.png"></div>
+		<div class="col-33"><img src="hole.png"></div>
+		<div class="col-33"><img src="hole.png"></div>
+		<div class="col-33"><img src="hole.png"></div>
+		<div class="col-33"><img src="hole.png"></div>
+		<div class="col-33"><img src="hole.png"></div>
+	</div>
+	<footer><button id="play">开始游戏</button></footer>
+	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#container').css('height',document.body.clientWidth*0.9+'px');
+			$('.col-33 img').css('left',($('.col-33').width()-$('.col-33 img').width())/2+'px');
+			$(window).resize(function(){
+				$('#container').css('height',document.body.clientWidth*0.9+'px');
+				$('.col-33 img').css('left',($('.col-33').width()-$('.col-33 img').width())/2+'px');
+			})
+			var ct=0,c,t,prev;
+			$('#play').click(function(){
+				if($(this).text()=="开始游戏"){
+					$(this).text("结束游戏");
+					var i=30,x=0;
+					var $imgs=$('img');
+					c=setInterval(function(){
+						$('#time').text(--i);
+						if(i==0){
+							clearInterval(c);
+							clearInterval(t);
+							$('#play').text("开始游戏");
+							prev.src='hole.png';
+							alert("游戏结束，本次游戏打到地鼠 "+$('#fraction').text()+' 只，加油^_^');
+							$('#time').text(30);
+						}
+					},1000)
+					t=setInterval(function(){
+						if(x==1)prev.src='hole.png';
+						x=1;
+						prev=$imgs[Math.floor(Math.random()*9)];
+						prev.src='mole.png';
+					},(3+Math.floor(Math.random()*13))*100)
+				}else if($(this).text()=="结束游戏"){
+					alert("很遗憾您已选择结束游戏，本次游戏打到地鼠 "+$('#fraction').text()+' 只，再接再厉哦^_^');
+					$(this).text("开始游戏");
+					clearInterval(c);
+					clearInterval(t);
+					$('#time').text('30');
+					$('#fraction').text('0');
+					prev.src='hole.png';
+				}
+			})
+			var fenshu=parseInt($('#fraction').text());
+			$('img').on('click',function(e){
+				if($(this).attr('src').indexOf('mole')==0 && $('#play').text()!="开始游戏"){
+					fenshu+=1;
+				 	$('#fraction').text(fenshu);
+				}
+			})
+		})
+	</script>
+</body>
+</html>
