@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>pintuGame</title>
+   	<link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+	<header>
+		拼图游戏，不喜勿喷~~
+	</header>
+	<button id="yuantu">查看原图</button>
+	<div id="cover"></div>
+	<div id="container">
+		<div class="col-33"><img src="imgs/1.png" id="1"/></div>
+		<div class="col-33"><img src="imgs/2.png" id="2"/></div>
+		<div class="col-33"><img src="imgs/3.png" id="3"/></div>
+		<div class="col-33"><img src="imgs/4.png" id="4"/></div>
+		<div class="col-33"><img src="imgs/5.png" id="5"/></div>
+		<div class="col-33"><img src="imgs/6.png" id="6"/></div>
+		<div class="col-33"><img src="imgs/7.png" id="7"/></div>
+		<div class="col-33"><img src="imgs/8.png" id="8"/></div>
+		<div class="col-33"><img src="imgs/9.png" id="9"/></div>
+	</div>
+	<footer>
+		<button id="play">开始游戏</button>
+		<div id="time">
+			游戏已开始：<span id="runtime">0</span>秒
+		</div>
+		<div id="guide"><br>游戏说明书：<br>1.点击上下左右邻接的图片进行调换位置。<br>2.点击查看原图按钮显示原图2秒。</div>
+	</footer>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
