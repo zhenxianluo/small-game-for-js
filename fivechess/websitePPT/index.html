@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>五子棋</title>
+	<link href="css/impress-demo.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div id="impress">
+		<div id="start" class="step slide front_card" data-x="0">
+			<canvas id="fivechess" width="450" height="450"></canvas>
+		</div>
+		<div id="introduction" class="step slide card" data-x="1000" data-y="500" data-z="-2000">
+			<article>
+				<header>游戏介绍</header><br>
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;五子棋是一种两人对弈的纯策略型棋类游戏，是起源于中国古代的传统黑白棋种之一。早在“尧造围棋”之前，可能民间就已有五子棋游戏。发展于日本，流行于欧美。</span><br>
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;五子连珠棋五子棋容易上手，老少皆宜，而且趣味横生，引人入胜;不仅能增强思维能力，提高智力，而且富含哲理，有助于修身养性。</span><br>
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;五子棋是起源于中国古代的传统黑白棋种之一。现代五子棋日文称之为 “ 连珠 ” ，英译为 “Renju” ，英文称之为 “Gobang” 或 “FIR”(Five in a Row 的缩写 ) ，亦有 “ 连五子 ” 、 “ 五子连 ” 、 “ 串珠 ” 、 “ 五目 ” 、 “ 五目碰 ” 、 “ 五格 ” 等多种称谓。</span><br>
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;五子棋不仅能增强思维能力，提高智力，而且富含哲理，有助于修身养性。五子棋既有现代休闲的明显特征 “ 短、平、快 ” ，又有古典哲学的高深学问 “ 阴阳易理 ” ;它既有简单易学的特性，为人民群众所喜闻乐见，又有深奥的技巧和高水平的国际性比赛;它的棋文化源渊流长，具有东方的神秘和西方的直观;既有 “ 场 ” 的概念，亦有 “ 点 ” 的连接。它是中西文化的交流点，是古今哲理的结晶。</span>
+			</article>
+		</div>
+		<div id="method" class="step slide card" data-x="1900" data-y="790" data-z="-4000">
+			<header>规则如下:</header><br>
+			<ol>
+				<li>1.准备19×19棋盘两张</li>
+				<li>2.黑白子数目必须满足</li>
+				<li>3.第一回合先手只能下一手,其馀回合可以下连续两手</li>
+				<li>4.后手每回合均可以下连续两手</li>
+				<li>5.每颗子所投的棋盘没有限制</li>
+				<li>6.若任意一方在两个棋盘上且不同一个回合上连为五子为负</li>
+				<li>7.若任意一方在不足两个棋盘上且同一个回合上连为五子为负</li>
+			</ol>
+		</div>
+		<div id="imageshow" class="step slide card" data-x="2800" data-y="1100" data-z="-6000">
+			<img id="img" src="images/img1.png">
+			<img id="img" src="images/img2.png">
+			<img id="img" src="images/img3.png">
+			<div id="imagetxt">
+				<div>游戏截图</div>
+			</div>
+		</div>
+		<div id="codeshow" class="step slide card" data-x="1000" data-y="-500" data-z="-2000">
+			<article>
+				<header>代码展示(1)</header><br>
+				<span id="abouttxt">非常抱歉，虽然我们都是可以用手机安装的app应用，但是我的却是网页打包的，因此只能放上关键的js代码：<br>init,step,adot,panduan</span><br>
+				<img id="img" src="images/codeimginit.png">
+				<img id="img" src="images/codeimgstepadot.png">
+				<img id="img" src="images/codeimgpanduan.png">
+			</article>
+		</div>
+		<div id="codeshow2" class="step slide card" data-x="1900" data-y="-790" data-z="-4000">
+			<article>
+				<header>代码展示(2)</header><br>
+				<span id="abouttxt">click,index</span><br>
+				<img id="img" src="images/codeimgclick.png">
+				<img id="img" src="images/codeimg.png">
+				<img id="img" src="images/codeimg2.png">
+			</article>
+		</div>
+		<div id="summary" class="step slide card" data-x="2800" data-y="-1100" data-z="-6000">
+			<div><b class="scaling">完</b><br></b><br></b><br>由于个人原因给老师带来困扰，学生深感  <b class="scaling2 rotating">  歉意！</b><br><br>又由于时间<b class="rotating2">仓促</b>，ppt制作简陋，<b class="rotating">谢谢</b>同学们观看！</div>
+		</div>
+	</div>
+	<div id="banner">
+		<ol>
+			<a href="#start"><strong style="font-size:150%;">导航</strong></a>
+			<a href="#introduction">游戏介绍</a>
+			<a href="#method">游戏玩法</a>
+			<a href="#imageshow">图片展示</a>
+			<a href="#codeshow">代码展示</a>
+			<a href="#summary">总结</a>
+		</ol>
+	</div>
+	<div id="bigimg"><img src="" id="imgshow"></div>
+	<div id="author">班级：<b class="positioning">计算机14*</b>&nbsp;学号：<b class="rotating">201421010******</b>&nbsp;姓名：<b class="scaling">**</b></div>
+	<script src="js/jquery.min.1.83.js"></script>
+	<script src="js/impress.js"></script>
+	<script type="text/javascript">impress().init();</script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

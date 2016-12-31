@@ -1,0 +1,83 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	max-width: 500px;
+	min-width: 300px;
+	background-color: white;
+}
+#chesspanl{
+	width: 100%;
+	background-color: white;
+}
+#main{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: red;
+	top: 0;
+	text-align: center;
+	display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+#main_cont{
+	font-size: 30px;
+}
+.option{
+	background: rgba(255,255,255,0.6);
+	padding: 5px 10px;
+	border-radius: 10px;
+}
+#logo{
+	font-size: 60px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 10%;
+}
+header{
+	width: 100%;
+	padding: 5px 4%;
+}
+header div{
+	width: 35%;
+	float: left;
+	text-align: center;
+}
+header div:nth-child(3){
+	width: 20%;
+	text-align: left;
+}
+#threeangle{
+	width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right: 15px solid red;
+}
+#show div{
+	text-align: center;
+	float: left;
+	font-size: 16px;
+}
+#show>div{
+	width: 100%;
+	margin-top: 8px;
+}
+#show1{
+	width: 20%;
+}
+#show2{
+	width: 25%;
+}
+#show3{
+	width: 25%;
+}
+#show4{
+	width: 15%;
+}
+#show5{
+	width: 15%;
+}

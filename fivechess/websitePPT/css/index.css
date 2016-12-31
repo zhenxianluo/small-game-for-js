@@ -1,0 +1,134 @@
+body{
+	font-size: 10px;
+}
+#fivechess{
+	width: 100%;
+	height: 100%;
+}
+#banner{
+	pointer-events: auto;
+    z-index: 3000;
+    width: 3em;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#banner ol a{
+	background: #ccc;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin-top: 20px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px #ccc;
+	font-size: 1rem;
+	display: block;
+}
+#banner ol a:hover{
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+}
+header{
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+}
+#method li{
+	margin-top: 2rem;
+}
+article span{
+	line-height: 1;
+	font-size: 1.7rem;
+}
+#author{
+	position: absolute;
+	bottom:5px;
+	font-size: 1rem;
+	right: 10px;
+}
+#abouttxt{
+	display: block;
+}
+#impress img{
+	width: 32%;
+}
+#imagetxt{
+	text-align: center;
+	margin-top: 10%;
+}
+#bigimg{
+	position: absolute;
+	width: 100%;
+	background:rgba(0,0,0,0.9);
+	height: 100%;
+}
+#imgshow{
+	width:32%;
+	height: auto;
+}
+#summary div{
+	text-align: center;
+	margin-top: 20%;
+} 
+#summary b {
+    display: inline-block;
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+#summary.present .rotating {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform:    rotate(-10deg);
+    -ms-transform:     rotate(-10deg);
+    -o-transform:      rotate(-10deg);
+    transform:         rotate(-10deg);
+
+    -webkit-transition-delay: 0.25s;
+    -moz-transition-delay:    0.25s;
+    -ms-transition-delay:     0.25s;
+    -o-transition-delay:      0.25s;
+    transition-delay:         0.25s;
+}
+#summary.present .rotating2 {
+    -webkit-transform: rotate(10deg);
+    -moz-transform:    rotate(10deg);
+    -ms-transform:     rotate(10deg);
+    -o-transform:      rotate(10deg);
+    transform:         rotate(10deg);
+
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay:    0.5s;
+    -ms-transition-delay:     0.5s;
+    -o-transition-delay:      0.5s;
+    transition-delay:         0.5s;
+}
+#summary.present .scaling {
+    -webkit-transform: scale(5);
+    -moz-transform:    scale(5);
+    -ms-transform:     scale(5);
+    -o-transform:      scale(5);
+    transform:         scale(5);
+
+    -webkit-transition-delay: 1s;
+    -moz-transition-delay:    1s;
+    -ms-transition-delay:     1s;
+    -o-transition-delay:      1s;
+    transition-delay:         1s;
+}
+#summary.present .scaling2 {
+    -webkit-transform: scale(1.5);
+    -moz-transform:    scale(1.5);
+    -ms-transform:     scale(1.5);
+    -o-transform:      scale(1.5);
+    transform:         scale(1.5);
+
+    -webkit-transition-delay: 0.8s;
+    -moz-transition-delay:    0.8s;
+    -ms-transition-delay:     0.8s;
+    -o-transition-delay:      0.8s;
+    transition-delay:         0.8s;
+}
